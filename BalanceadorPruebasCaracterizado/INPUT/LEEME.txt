@@ -1,0 +1,2 @@
+El archivo de validados en formato Excel.
+Debe llamarse "VALIDADOS".

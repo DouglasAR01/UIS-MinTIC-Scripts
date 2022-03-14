@@ -1,0 +1,2 @@
+El output de este programa son 10 archivos.
+Los grupos CA[1->9] y el archivo consolidado.
