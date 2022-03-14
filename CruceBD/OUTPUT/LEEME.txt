@@ -1,0 +1,4 @@
+AQUÍ SE AÑADEN LOS RESULTADOS:
+-> VALIDADOS: Las personas que hicieron inscripción y formulario
+-> SOLO_FORMULARIO: Las personas que, probablemente, solo hicieron el formulario de caracterización
+-> SOLO_INSCRIPCION_UIS: Las personas que, probablemente, solo hicieron la inscripción
