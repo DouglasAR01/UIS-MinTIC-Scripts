@@ -1,0 +1,3 @@
+Salen dos archivos, uno con el formato para
+ser cargado en la plataforma de SMS.
+El otro sirve como histórico.

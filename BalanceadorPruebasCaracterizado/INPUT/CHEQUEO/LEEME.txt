@@ -1,0 +1,2 @@
+Deben haber dos archivos: CONSOLIDADO y SISTEMA
+El segundo es generado por el sistema académico.
