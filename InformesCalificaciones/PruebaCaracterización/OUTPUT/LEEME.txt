@@ -1,0 +1,4 @@
+Genera el archivo consolidado de las
+calificaciones de los grupos de la prueba
+de caracterización más el informe granular
+por grupo (CA1-CA9)
