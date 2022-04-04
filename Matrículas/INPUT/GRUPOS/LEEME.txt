@@ -1,2 +1,6 @@
-ACA VA EL ARCHIVO CONSOLIDADO QUE GENERA
-EL SCRIPT INDAGADOR
+Acá va el archivo consolidado que genera el
+script indagador. Debe tener como nombre
+CONSOLIDADO_DATOS_IMPORTANTES
+
+También, va el archivo de cambios de horario
+con el nombre CAMBIOS_HORARIO
