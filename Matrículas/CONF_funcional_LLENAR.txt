@@ -1,0 +1,84 @@
+TOLERANCIA = 2
+JORNADAS_MANUALES = {
+    'PYTHON': {
+        'MAÑANA': 22,
+        'TARDE': 12,
+        'NOCHE': 36
+    },
+    'INGLES 1': {
+        'MAÑANA': 24,
+        'TARDE': 19,
+        'NOCHE': 27
+    },
+    'COACH 1': {
+        'MAÑANA': 22,
+        'TARDE': 23,
+        'NOCHE': 25
+    }
+}
+CURSOS_MANUALES = {
+    'PYTHON': {
+        'MAÑANA': [
+            ('Jornada de la mañana (6 a.m. a 8 a.m.)', 9),
+            ('Jornada de la mañana (8 a.m. a 10 a.m.)', 8),
+            ('Jornada de la mañana (10 a.m. a 12 m.)', 5)
+        ],
+        'TARDE': [
+            ('Jornada de la tarde (12 m. a 2 p.m.)', 3),
+            ('Jornada de la tarde (2 p.m. a 4 p.m.)', 4),
+            ('Jornada de la tarde (4 p.m. a 6 p.m.)', 5)
+        ],
+        'NOCHE': [
+            ('Jornada de la noche (6 p.m. a 8 p.m.)', 18),
+            ('Jornada de la noche (8 p.m. a 10 p.m.)', 18)
+        ]
+    },
+    'INGLES 1': {
+        'MAÑANA': [
+            ('Jornada de la mañana (6 a.m. a 7 a.m.)', 7),
+            ('Jornada de la mañana (7 a.m. a 8 a.m.)', 6),
+            ('Jornada de la mañana (8 a.m. a 9 a.m.)', 0),
+            ('Jornada de la mañana (9 a.m. a 10 a.m.)', 6),
+            ('Jornada de la mañana (10 a.m. a 11 a.m.)', 0),
+            ('Jornada de la mañana (11 a.m. a 12 m.)', 5)
+        ],
+        'TARDE': [
+            ('Jornada de la tarde (12 m. a 1 p.m.)', 5),
+            ('Jornada de la tarde (1 p.m. a 2 p.m.)', 5),
+            ('Jornada de la tarde (2 p.m. a 3 p.m.)', 3),
+            ('Jornada de la tarde (3 p.m. a 4 p.m.)', 0),
+            ('Jornada de la tarde (4 p.m. a 5 p.m.)', 0),
+            ('Jornada de la tarde (5 p.m. a 6 p.m.)', 6)
+        ],
+        'NOCHE': [
+            ('Jornada de la noche (6 p.m. a 7 p.m.)', 5),
+            ('Jornada de la noche (7 p.m. a 8 p.m.)', 7),
+            ('Jornada de la noche (8 p.m. a 9 p.m.)', 10),
+            ('Jornada de la noche (9 p.m. a 10 p.m.)', 5)
+        ]
+    },
+    'COACH 1': {
+        'MAÑANA': [
+            ('Jornada de la mañana (6 a.m. a 7 a.m.)', 5),
+            ('Jornada de la mañana (7 a.m. a 8 a.m.)', 4),
+            ('Jornada de la mañana (8 a.m. a 9 a.m.)', 5),
+            ('Jornada de la mañana (9 a.m. a 10 a.m.)', 2),
+            ('Jornada de la mañana (10 a.m. a 11 a.m.)', 4),
+            ('Jornada de la mañana (11 a.m. a 12 m.)', 2)
+        ],
+        'TARDE': [
+            ('Jornada de la tarde (12 m. a 1 p.m.)', 4),
+            ('Jornada de la tarde (1 p.m. a 2 p.m.)', 5),
+            ('Jornada de la tarde (2 p.m. a 3 p.m.)', 2),
+            ('Jornada de la tarde (3 p.m. a 4 p.m.)', 4),
+            ('Jornada de la tarde (4 p.m. a 5 p.m.)', 4),
+            ('Jornada de la tarde (5 p.m. a 6 p.m.)', 4)
+        ],
+        'NOCHE': [
+            ('Jornada de la noche (6 p.m. a 7 p.m.)', 6),
+            ('Jornada de la noche (7 p.m. a 8 p.m.)', 4),
+            ('Jornada de la noche (8 p.m. a 9 p.m.)', 6),
+            ('Jornada de la noche (9 p.m. a 10 p.m.)', 9)
+        ]
+    }
+}
