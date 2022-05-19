@@ -1,0 +1,11 @@
+import re
+print ('El archivo a modificar debe de estar en el mismo directorio que este programa')
+nombre = input('Escriba el nombre del archivo csv a arreglar: ')
+f = open(nombre + '.csv', mode='r')
+contenido = f.read()
+f.close()
+contenido = re.sub(r'\"(.*?)\"', lambda g: re.sub(r'\,', ' --@-- ', g[0]), contenido, flags=re.MULTILINE|re.DOTALL)
+contenido = contenido.replace(',', ';').replace(' --@-- ', ',')
+guardar = open(f"./{nombre}_arreglado.csv", 'w')
+guardar.write(contenido)
+guardar.close()
