@@ -1,0 +1,17 @@
+CODIGO_MATERIA = 'F'
+ASIGNATURA = 'INGLES I'
+NUMERO_GRUPOS = 72
+RUTA = './INPUT/GRUPOS_PREDEFINITIVAS/'
+CONSULTA = './INPUT/DEFINITIVAS_31-05.csv'
+MATERIA_CON_HOMOLOGACION = True
+GRUPO_HOMOLOGACION = 'HOM'
+NOMENCLATURA_OMITIR = 5
+TOLERANCIA_MOODLE = 0.051
+ACTIVIDADES_CALIFICABLES = [
+    'Academic Reading 2',    
+    'Academic Reading 4',
+    'Assessment Test - Cycle 1',
+    'ESP Reading 2',
+    'ESP Reading 4',
+    'Mid-Term Exam'
+]

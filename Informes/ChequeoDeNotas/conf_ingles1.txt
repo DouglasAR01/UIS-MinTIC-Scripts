@@ -1,0 +1,15 @@
+NOMENCLATURA_TIENE_PUNTOS = False
+ACTIVIDADES_CALIFICABLES = [
+    'Academic Reading 2',    
+    'Academic Reading 4',
+    'Assessment Test - Cycle 1',
+    'ESP Reading 2',
+    'ESP Reading 4',
+    'Mid-Term Exam'
+]
+BLOQUES_ACTIVIDADES = {
+    'Total Activities 1 (Real)' : (['ESP Reading 2', 'Academic Reading 2'], 0.25),
+    'Total Mid Term Exam (Real)' : (['Mid-Term Exam'], 0.25),
+    'Total Activities 2 (Real)': (['Academic Reading 4', 'ESP Reading 4'], 0.25),
+    'Total Final Exam (Real)': (['Assessment Test - Cycle 1'], 0.25)
+}

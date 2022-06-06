@@ -1,0 +1,7 @@
+NOMENCLATURA_TIENE_PUNTOS = True
+ACTIVIDADES_CALIFICABLES = [
+    'Cuestionario. Aprendizaje autónomo y motivación'
+]
+BLOQUES_ACTIVIDADES = {
+    'Total Cuestionario Final (Real)' : (['Cuestionario. Aprendizaje autónomo y motivación'], 1),
+}
