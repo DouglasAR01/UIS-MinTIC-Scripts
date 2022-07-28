@@ -1,0 +1,32 @@
+CURSO = 'M49'
+MODO_NORMAL = False # Temporal, solo para programación
+RUTA_GENERAL = './INPUT/GRUPOS_PREDEFINITIVAS/'
+RUTA_ESPECIFICA = RUTA_GENERAL + CURSO
+PREFIJO_CUESTIONARIOS = 'Cuestionario:'
+SUFIJO_ACTIVIDADES = ' (Real)'
+NOMENCLATURA_OMITIR = 5
+TOLERANCIA_MOODLE = 0.051
+NOMENCLATURA_TIENE_PUNTOS = False
+ACTIVIDADES_CALIFICABLES = [
+    'Academic Reading 6',    
+    'Academic Reading 8',
+    'Assessment Test - Cycle 2',
+    'ESP Reading 6',
+    'ESP Reading 8',
+    'Mid-Term Exam'
+]
+if MODO_NORMAL:
+    BLOQUES_ACTIVIDADES = {
+        'Cuestionario:Reto tema 1 (Real)' : (['Reto tema 1'], 0.125),
+        'Cuestionario:Reto tema 2 (Real)' : (['Reto tema 2'], 0.125),
+        'Cuestionario:Reto tema 3 (Real)' : (['Reto tema 3'], 0.25),
+        'Cuestionario:Reto tema 4 (Real)' : (['Reto tema 4'], 0.25),
+        'Cuestionario:Reto tema 5 (Real)' : (['Reto tema 5'], 0.25),
+    }
+else:
+    BLOQUES_ACTIVIDADES = {
+        'Total Activities 1 (Real)' : (['ESP Reading 6', 'Academic Reading 6'], 0.25),
+        'Total Mid-term (Real)' : (['Mid-Term Exam'], 0.25),
+        'Total Activities 2 (Real)': (['Academic Reading 8', 'ESP Reading 8'], 0.25),
+        'Total Final Exam (Real)': (['Assessment Test - Cycle 2'], 0.25)
+    }

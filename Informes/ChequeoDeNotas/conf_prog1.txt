@@ -1,0 +1,24 @@
+NOMENCLATURA_TIENE_PUNTOS = False
+ACTIVIDADES_CALIFICABLES = [
+    'Reto tema 1',
+    'Reto tema 2',
+    'Reto tema 3',
+    'Reto tema 4',
+    'Reto tema 5',
+]
+if MODO_NORMAL:
+    BLOQUES_ACTIVIDADES = {
+        'Cuestionario:Reto tema 1 (Real)' : (['Reto tema 1'], 0.125),
+        'Cuestionario:Reto tema 2 (Real)' : (['Reto tema 2'], 0.125),
+        'Cuestionario:Reto tema 3 (Real)' : (['Reto tema 3'], 0.25),
+        'Cuestionario:Reto tema 4 (Real)' : (['Reto tema 4'], 0.25),
+        'Cuestionario:Reto tema 5 (Real)' : (['Reto tema 5'], 0.25),
+    }
+else:
+    BLOQUES_ACTIVIDADES = {
+        'Total Reto 1 (Real)' : (['Reto tema 1'], 0.125),
+        'Total Reto 2 (Real)' : (['Reto tema 2'], 0.125),
+        'Total Reto 3 (Real)' : (['Reto tema 3'], 0.25),
+        'Total Reto 4 (Real)' : (['Reto tema 4'], 0.25),
+        'Total Reto 5 (Real)' : (['Reto tema 5'], 0.25),
+    }
