@@ -1,0 +1,24 @@
+# PARÁMETROS
+CARPETA_NIVS = 'PYTHON' # Se cambia de acuerdo al perfil de informe a generar
+NOMBRE_COLUMNA_CALIFICACIONES = 'Calificación/5.00'
+EST_MATRICULADOS = pd.read_excel(f'./INPUT/{CARPETA_NIVS}/EstudiantesMatriculadosNiv.xlsx', engine = 'openpyxl')
+VERSIONES_NIV = [f'./INPUT/{CARPETA_NIVS}/2022-1-2499-NP1-Presencial-Examen de nivelación_-calificaciones.csv', f'./INPUT/{CARPETA_NIVS}/2022-1-2499-NP1-Presencial-Examen de nivelación-calificaciones.csv']
+
+UMBRAL_APROBACION = 3
+ARRASTRE = True
+UMBRAL_ARRASTRE = 3.7
+
+COLUMNAS_EVAL = True
+NUMERO_EVAL = 5
+NOMBRE_EVAL = 'RETO'
+
+GENERAR_ARCHIVOS_CSV = True # Requiere que NUMERO_EVAL esté configurado correctamente
+ANIO = 2022
+PERIODO = 1
+CODIGO_ASIGNATURA = 2411
+GRUPO = 'NIV'
+CSV_DIFERENCIAL = True # Si se requiere que los archivos CSV generados NO compartan datos de cargue de un punto anterior
+if CSV_DIFERENCIAL:
+    # Se debe de cargar el formato de nivelación que se usó como punto de control
+    # Eventualmente se podría convertir en una lista
+    CHECKPOINT = pd.read_excel(f'./INPUT/{CARPETA_NIVS}/INFORME_NIVELACIÓN_2022-07-19_Hora-11-VERF-21-12PM.xlsx', sheet_name='Estudiantes que aprobaron', engine = 'openpyxl')
