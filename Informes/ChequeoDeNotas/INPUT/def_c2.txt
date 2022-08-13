@@ -1,0 +1,38 @@
+DATOS = pd.read_csv('./INPUT/DEFINITIVAS-C2-30-07.csv', skiprows=1, sep=';', encoding='latin-1')
+CANCELADOS = pd.read_excel('./INPUT/INFO_MATRICULAS.xlsx', engine='openpyxl', sheet_name='5. CANCELAR MATRICULA')['CODIGO_UIS'].unique()
+INCLUIR_CANCELADOS_ANTERIORES = True
+if INCLUIR_CANCELADOS_ANTERIORES:
+    CANCELADOS_ANTERIORES = pd.read_excel('./INPUT/DEFINITIVAS_C1/INFO_MATRICULAS.xlsx', engine='openpyxl', sheet_name='4. CANCELADOS')['CODIGO_UIS'].unique()
+
+REINGRESADOS = [
+    2222985,
+    2220048
+]
+
+CODIGOS = DATOS['ESTUDIANTE'].unique()
+CICLO = 2
+# La llave debe ser el nombre de la asignatura y el contenido una tupla (porcentaje, haceParteParcial),
+# donde haceParteParcial es Verdadero si y solo si se requiere en el calculo individual de notas parciales.
+# por defecto debe ser Verdadero si la asignatura NO es la asignatura con retos/sprints.
+ASIGNATURAS = {
+    'JAVA': (0.8, False),
+    'INGLES II': (0.1, True),
+    'COACHING II': (0.1, True)
+}
+UMBRAL_REPROBADO_SA = 2.945
+UMBRAL_REPROBADO_100K = 3
+REDONDEO_DECIMALES_SA = 1
+REDONDEO_DECIMALES_100K = 2
+INCLUIR_RETOS = True
+if INCLUIR_RETOS:
+    ASIGNATURA_RETOS = 'JAVA'
+    DATOS_PARCIALES = pd.read_csv('./INPUT/PARCIALES-C2-30-07.csv', skiprows=1, sep=';', encoding='latin-1')
+# Los porcentajes de la siguiente lista NO deben ser los de Moodle sino los dados por el MinTIC/Operador para EL CICLO
+RETOS = [
+    ('RETO_1', 0.1),
+    ('RETO_2', 0.1),
+    ('RETO_3', 0.2),
+    ('RETO_4', 0.2),
+    ('RETO_5', 0.2),
+]
+N_RETOS = len(RETOS)
