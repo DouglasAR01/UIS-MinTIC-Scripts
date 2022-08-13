@@ -1,0 +1,4 @@
+/downloads/*.xlsx
+/conf/*.exe
+CREDENCIALES.json
+/Temp/*.*
