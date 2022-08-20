@@ -1,12 +1,13 @@
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 import json
 from os import getcwd
 
 RUTA_BASE = getcwd()
 RUTA_DRIVER = RUTA_BASE + '/conf/chromedriver.exe'
-RUTA_DESCARGAS = RUTA_BASE + '/downloads'
+RUTA_DESCARGAS = RUTA_BASE + '\\downloads'
 RUTA_CREDENCIALES = RUTA_BASE + '/conf/CREDENCIALES.json'
 RUTA_CONFIGURACION = RUTA_BASE + '/conf/CURSOS.xlsx'
 
@@ -18,7 +19,13 @@ f.close()
 CONFIGURACION_GRUPOS = pd.read_excel(RUTA_CONFIGURACION, engine = 'openpyxl')
 
 # CONFIGURACIÓN DEL DRIVER
-DRIVER = webdriver.Chrome(executable_path = RUTA_DRIVER)
+options = Options()
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
+options.add_experimental_option("prefs", {
+  "download.default_directory": RUTA_DESCARGAS
+  })
+DRIVER = webdriver.Chrome(executable_path = RUTA_DRIVER, options=options)
 DRIVER.implicitly_wait(0.5)
 DRIVER.maximize_window()
 
