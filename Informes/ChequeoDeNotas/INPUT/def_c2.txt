@@ -1,12 +1,13 @@
-DATOS = pd.read_csv('./INPUT/DEFINITIVAS-C2-30-07.csv', skiprows=1, sep=';', encoding='latin-1')
-CANCELADOS = pd.read_excel('./INPUT/INFO_MATRICULAS.xlsx', engine='openpyxl', sheet_name='5. CANCELAR MATRICULA')['CODIGO_UIS'].unique()
-INCLUIR_CANCELADOS_ANTERIORES = True
-if INCLUIR_CANCELADOS_ANTERIORES:
+DATOS = pd.read_csv('./INPUT/DEFINITIVAS_C2/DEFINITIVAS-C2-26-09.csv', skiprows=1, sep=';', encoding='latin-1')
+CANCELADOS = pd.read_excel('./INPUT/DEFINITIVAS_C2/INFO_MATRICULAS.xlsx', engine='openpyxl', sheet_name='5. CANCELAR MATRICULA')['CODIGO_UIS'].unique()
+EXCLUIR_CANCELADOS_ANTERIORES = True
+if EXCLUIR_CANCELADOS_ANTERIORES:
     CANCELADOS_ANTERIORES = pd.read_excel('./INPUT/DEFINITIVAS_C1/INFO_MATRICULAS.xlsx', engine='openpyxl', sheet_name='4. CANCELADOS')['CODIGO_UIS'].unique()
 
 REINGRESADOS = [
     2222985,
-    2220048
+    2220048,
+    2220040
 ]
 
 CODIGOS = DATOS['ESTUDIANTE'].unique()
@@ -26,7 +27,7 @@ REDONDEO_DECIMALES_100K = 2
 INCLUIR_RETOS = True
 if INCLUIR_RETOS:
     ASIGNATURA_RETOS = 'JAVA'
-    DATOS_PARCIALES = pd.read_csv('./INPUT/PARCIALES-C2-30-07.csv', skiprows=1, sep=';', encoding='latin-1')
+    DATOS_PARCIALES = pd.read_csv('./INPUT/DEFINITIVAS_C2/PARCIALES-C2-26-09.csv', skiprows=1, sep=';', encoding='latin-1')
 # Los porcentajes de la siguiente lista NO deben ser los de Moodle sino los dados por el MinTIC/Operador para EL CICLO
 RETOS = [
     ('RETO_1', 0.1),

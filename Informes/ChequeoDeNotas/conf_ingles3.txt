@@ -1,0 +1,36 @@
+CURSO = 'S56'
+MODO_NORMAL = False # Temporal, solo para programación. Se usa cuando las actividades NO están dentro de una carpeta (de Moodle)
+RUTA_GENERAL = './INPUT/GRUPOS_PREDEFINITIVAS/'
+RUTA_ESPECIFICA = RUTA_GENERAL + CURSO
+PREFIJO_CUESTIONARIOS = 'Cuestionario:'
+SUFIJO_ACTIVIDADES = ' (Real)'
+NOMENCLATURA_OMITIR = 5
+TOLERANCIA_MOODLE = 0.051
+NOMENCLATURA_TIENE_PUNTOS = False
+# En esta lista solo se ponen cuestionarios. Las TAREAS van en los bloques de actividades.
+ACTIVIDADES_CALIFICABLES = [
+    'Academic Reading 10',    
+    'Academic Reading 12',
+    'Assessment Test - Cycle 3',
+    'ESP Reading 10',
+    'ESP Reading 12',
+    'Mid-Term Exam'
+]
+# El último elemento se cambia por True si solo si la actividad es una tarea, puesto que esas NO es posible descargarlas
+# y esas toca es verificarlas contra el libro de calificaciones
+if MODO_NORMAL:
+    BLOQUES_ACTIVIDADES = {
+        'Cuestionario:Reto tema 1 (Real)' : (['Reto tema 1'], 0.125, False),
+        'Cuestionario:Reto tema 2 (Real)' : (['Reto tema 2'], 0.125, False),
+        'Cuestionario:Reto tema 3 (Real)' : (['Reto tema 3'], 0.25, False),
+        'Cuestionario:Reto tema 4 (Real)' : (['Reto tema 4'], 0.25, False),
+        'Cuestionario:Reto tema 5_1 (Real)' : (['Reto tema 5_1'], 0.1, False),
+        'Tarea:Reto 5_2 (Real)' : (['Reto 5_2'], 0.15, True),
+    }
+else:
+    BLOQUES_ACTIVIDADES = {
+        'Total Activities 1 (Real)' : (['ESP Reading 10', 'Academic Reading 10'], 0.25, False),
+        'Total Mid-term Exam (Real)' : (['Mid-Term Exam'], 0.25, False),
+        'Total Activities 2 (Real)': (['Academic Reading 12', 'ESP Reading 12'], 0.25, False),
+        'Total Final Exam (Real)': (['Assessment Test - Cycle 3'], 0.25, False)
+    }
