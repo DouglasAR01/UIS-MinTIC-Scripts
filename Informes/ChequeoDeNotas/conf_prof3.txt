@@ -1,0 +1,25 @@
+CURSO = 'O57'
+MODO_NORMAL = True # Temporal, solo para programación. Se usa cuando las actividades NO están dentro de una carpeta (de Moodle)
+RUTA_GENERAL = './INPUT/GRUPOS_PREDEFINITIVAS/'
+RUTA_ESPECIFICA = RUTA_GENERAL + CURSO
+PREFIJO_CUESTIONARIOS = 'Tarea:'
+SUFIJO_ACTIVIDADES = ' (Real)'
+NOMENCLATURA_OMITIR = 5
+TOLERANCIA_MOODLE = 0.051
+NOMENCLATURA_TIENE_PUNTOS = False
+# En esta lista solo se ponen cuestionarios. Las TAREAS van en los bloques de actividades.
+ACTIVIDADES_CALIFICABLES = [
+]
+# El último elemento se cambia por True si solo si la actividad es una tarea, puesto que esas NO es posible descargarlas
+# y esas toca es verificarlas contra el libro de calificaciones
+if MODO_NORMAL:
+    BLOQUES_ACTIVIDADES = {
+        'Tarea:Sprint 1. Definiendo el Proyecto (Real)' : (['Sprint 1. Definiendo el Proyecto'], 0.1875, True),
+        'Tarea:Sprint 2. Diseñando la Base de Datos (Real)' : (['Sprint 2. Diseñando la Base de Datos'], 0.1875, True),
+        'Tarea:Sprint 3. Estructurando el Backend (Real)' : (['Sprint 3. Estructurando el Backend'], 0.3125, True),
+        'Tarea:Sprint 4. Estructurando el FrontEnd (Real)' : (['Sprint 4. Estructurando el FrontEnd'], 0.3125, True),
+    }
+else:
+    BLOQUES_ACTIVIDADES = {
+        'Tarea:Pitch de talento (Real)' : (['Pitch de talento'], 1, True),
+    }
