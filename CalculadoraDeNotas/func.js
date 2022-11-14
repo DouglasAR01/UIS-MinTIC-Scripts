@@ -1,44 +1,44 @@
 const datos = [
     {
-        asignatura: 'Desarrollo de Software',
+        asignatura: 'Desarrollo web/móvil',
         porcentaje: 80,
         actividades: [
             {
-                nombre: 'Sprint 1: Definiendo el proyecto',
-                porcentaje: 18.75
-            },
-            {
-                nombre: 'Sprint 2: Diseñando la base de datos',
-                porcentaje: 18.75
-            },
-            {
-                nombre: 'Sprint 3: Estructurando el Backend',
+                nombre: 'Sprint 1',
                 porcentaje: 31.25
             },
             {
-                nombre: 'Sprint 4: Estructurando el frontend',
+                nombre: 'Sprint 2',
                 porcentaje: 31.25
+            },
+            {
+                nombre: 'Sprint 3',
+                porcentaje: 18.75
+            },
+            {
+                nombre: 'Sprint 4',
+                porcentaje: 18.75
             }
         ]
     },
     {
-        asignatura: 'Inglés III',
+        asignatura: 'Inglés IV',
         porcentaje: 10,
         actividades: [
             {
-                nombre: 'ESP Reading 10',
+                nombre: 'ESP Reading 13',
                 porcentaje: 12.5
             },
             {
-                nombre: 'ESP Reading 12',
+                nombre: 'ESP Reading 16',
                 porcentaje: 12.5
             },
             {
-                nombre: 'Academic Reading 10',
+                nombre: 'Academic Reading 13',
                 porcentaje: 12.5
             },
             {
-                nombre: 'Academic Reading 12',
+                nombre: 'Academic Reading 16',
                 porcentaje: 12.5
             },
             {
@@ -46,17 +46,17 @@ const datos = [
                 porcentaje: 25
             },
             {
-                nombre: 'Assessment Test - Cycle 3',
+                nombre: 'Assessment Test - Cycle 4',
                 porcentaje: 25
             }
         ]
     },
     {
-        asignatura: 'Habilidades personales III',
+        asignatura: 'Habilidades personales IV',
         porcentaje: 10,
         actividades: [
             {
-                nombre: 'Pitch de Talento',
+                nombre: 'Cuestionario. Habilidades Comunicativas y trabajo en equipo',
                 porcentaje: 100
             }
         ]
